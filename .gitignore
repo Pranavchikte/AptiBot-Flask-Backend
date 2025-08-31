@@ -1,0 +1,19 @@
+# Virtual Environment
+venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Environment variables file (contains secrets!)
+.env
+
+# Google Cloud credentials file (contains secrets!)
+gcloud_credentials.json
+
+# Uploaded files folder (temporary user data)
+uploads/
+
+# IDE specific folders
+.vscode/
+.idea/
