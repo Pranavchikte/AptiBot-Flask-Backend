@@ -9,7 +9,7 @@ from werkzeug.utils import secure_filename
 
 SESSIONS = {}
 UPLOAD_FOLDER = 'uploads'
-MAX_CONTENT_LENGTH = 10 * 1024 * 1024 # 10 MB limit
+MAX_CONTENT_LENGTH = 10 * 1024 * 1024 
 
 def create_app():
     app = Flask(__name__)
@@ -22,7 +22,6 @@ def create_app():
     
     CORS(app)
 
-    # --- CENTRALIZED ERROR HANDLERS ---
     @app.errorhandler(404)
     def not_found(error):
         return jsonify({"error": "Not Found: The requested URL was not found on the server."}), 404
@@ -38,7 +37,6 @@ def create_app():
     @app.errorhandler(413)
     def request_entity_too_large(error):
         return jsonify({"error": "File Too Large: The file exceeds the 10MB upload limit."}), 413
-    # ----------------------------------------
 
     @app.route('/')
     def index():

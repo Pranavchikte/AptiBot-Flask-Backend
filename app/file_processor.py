@@ -3,7 +3,6 @@ from PyPDF2 import PdfReader
 import docx
 from google.cloud import vision
 
-# This code correctly looks for 'gcloud_credentials.json'
 basedir = os.path.abspath(os.path.dirname(__file__))
 credentials_path = os.path.join(basedir, '..', 'gcloud_credentials.json')
 
